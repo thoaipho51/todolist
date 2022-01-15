@@ -1,38 +1,174 @@
-.App {
+.container {
+  width: 40%;
+  height: 500px;
+  background-color: ga;
+  background-image: linear-gradient( to bottom, #a18cd1, #fbc2eb);
+  margin:50px auto;
+  border-radius: 5px;
+}
+
+.header__title {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px 0;
+  text-transform: uppercase;
+  color: #FFF;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header__title:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient( to right,  #f6d365,  #fda085);
+  cursor: default;
+  transition: 0.2 ease;
 }
+.body {
+  width: 100%;
+  height: 85%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-image: linear-gradient( to right,  #a6c0fe,  #f68084 );
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form__group {
+  width: 90%;
+  height: 50px;
+  margin: auto ;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+
+}
+.form__list {
+  overflow: auto;
+  height: 80%;
+}
+._input {
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 60%;
+  border-radius: 5px;
+}
+._input:focus {
+  outline: #667eea;
+  border: 1px solid #667eea;
+}
+
+
+._btnAdd{
+  border: none;
+  outline: none;
+  color: #fda085;
+  
+  background-image: linear-gradient( to right,  #667eea,  #764ba2 );
+  min-width: 30px;
+  padding: 10px;
+  border-top-right-radius: 20px ;
+  border-bottom-left-radius: 20px ;
+  cursor: pointer;
+}
+._btnAdd:hover {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin:10px auto;
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+.list__todo {
+}
+
+.list__todo__item {
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 80%;
   color: white;
+  padding: 5px;
+  background-image: linear-gradient( to right,  #667eea,  #764ba2 );
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.list__todo__item:hover {
+  font-size: 18px;
+  transition: 0.2s linear;
+  color: rgb(255, 201, 169);
+
+}
+.btn__delete {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  color: white;
+  font-size: 18px;
+
+  width: 15%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-image: linear-gradient( to right,  #667eea,  #764ba2 );
+  min-width: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+.btn__delete:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient( to right,  #ff0000,  #ff0202);
+  width: 20%;
+  transition: 0.5s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.footer {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.btn__clear {
+  position: absolute;
+  border: none;
+  outline: none;
+  right: -100px;
+  height: 100%;
+  cursor: pointer;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.footer:hover .btn__clear {
+  right: 0;
+  width: 25%;
+  transition: 0.8s ease;
+  color: rgb(58, 5, 5);
+  font-weight:600 ;
+}
+.span__number {
+  margin-left:10px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient( to right,  rgb(46, 46, 46),  rgb(243, 54, 98));
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
   }
 }
